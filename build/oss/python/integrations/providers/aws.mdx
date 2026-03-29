@@ -1,5 +1,7 @@
 ---
-title: AWS (Amazon)
+title: "AWS (Amazon) integrations"
+description: "Integrate with AWS (Amazon) using LangChain Python."
+sidebarTitle: "AWS"
 ---
 
 This page covers all LangChain integrations with the [Amazon Web Services (AWS)](https://aws.amazon.com/) platform.
@@ -111,14 +113,14 @@ from langchain_aws import SagemakerEndpoint
 
 ### Bedrock
 
-See a [usage example](/oss/python/integrations/text_embedding/bedrock).
+See a [usage example](/oss/python/integrations/embeddings/bedrock).
 ```python
 from langchain_aws import BedrockEmbeddings
 ```
 
 ### SageMaker endpoint
 
-See a [usage example](/oss/python/integrations/text_embedding/sagemaker-endpoint).
+See a [usage example](/oss/python/integrations/embeddings/sagemaker-endpoint).
 ```python
 from langchain_community.embeddings import SagemakerEndpointEmbeddings
 from langchain_community.llms.sagemaker_endpoint import ContentHandlerBase
@@ -258,6 +260,16 @@ vds = InMemoryVectorStore.from_documents(
         )
 ```
 See a [usage example](/oss/python/integrations/vectorstores/memorydb).
+
+### Valkey
+
+[Valkey](https://valkey.io/) is an open source, high-performance key/value datastore that supports workloads such as caching, message queues, and can act as a primary database. Use ValkeyVectorStore to connect with [Amazon ElastiCache for Valkey](https://aws.amazon.com/elasticache/valkey/) or [Amazon MemoryDB for Valkey](https://aws.amazon.com/memorydb/).
+
+```python
+from langchain_aws.vectorstores import ValkeyVectorStore
+```
+
+See a [usage example](/oss/python/integrations/vectorstores/valkey).
 
 ## Retrievers
 
@@ -410,6 +422,14 @@ result = await agent.ainvoke(
 # Cleanup when done
 await toolkit.cleanup()
 ```
+
+## Sandboxes
+
+<Columns cols={2}>
+    <Card title="AgentCoreSandbox" href="/oss/python/integrations/sandboxes/aws" cta="Get started" icon="terminal" arrow>
+        Amazon Bedrock AgentCore Code Interpreter sandbox backend for deepagents.
+    </Card>
+</Columns>
 
 ## Graphs
 
@@ -620,9 +640,11 @@ agentcore launch -e your_agent.py
 
 ---
 
-<Callout icon="pen-to-square" iconType="regular">
+<div className="source-links">
+<Callout icon="edit">
     [Edit this page on GitHub](https://github.com/langchain-ai/docs/edit/main/src/oss/python/integrations/providers/aws.mdx) or [file an issue](https://github.com/langchain-ai/docs/issues/new/choose).
 </Callout>
-<Tip icon="terminal" iconType="regular">
+<Callout icon="terminal-2">
     [Connect these docs](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
-</Tip>
+</Callout>
+</div>

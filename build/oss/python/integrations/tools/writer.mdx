@@ -1,5 +1,6 @@
 ---
-title: WRITER Tools
+title: "Writer integration"
+description: "Integrate with the Writer tool using LangChain Python."
 ---
 
 This guide provides an overview for getting started with WRITER [tools](/oss/python/langchain/tools). For detailed documentation of all WRITER features and configurations, head to the [WRITER docs](https://dev.writer.com/home).
@@ -126,7 +127,7 @@ def get_supercopa_trophies_count(club_name: str) -> int | None:
 class GetWeather(BaseModel):
     """Get the current weather in a given location"""
 
-    location: str = Field(..., description="The city and state, e.g. San Francisco, CA")
+    location: str = Field(description="The city and state, e.g. San Francisco, CA")
 
 
 get_product_info = {
@@ -275,9 +276,11 @@ For detailed documentation of all `GraphTool` features and configurations, head 
 
 ---
 
-<Callout icon="pen-to-square" iconType="regular">
+<div className="source-links">
+<Callout icon="edit">
     [Edit this page on GitHub](https://github.com/langchain-ai/docs/edit/main/src/oss/python/integrations/tools/writer.mdx) or [file an issue](https://github.com/langchain-ai/docs/issues/new/choose).
 </Callout>
-<Tip icon="terminal" iconType="regular">
+<Callout icon="terminal-2">
     [Connect these docs](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
-</Tip>
+</Callout>
+</div>

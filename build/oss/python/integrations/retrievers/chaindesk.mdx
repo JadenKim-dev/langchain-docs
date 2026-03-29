@@ -1,5 +1,6 @@
 ---
-title: Chaindesk
+title: "Chaindesk integration"
+description: "Integrate with the Chaindesk retriever using LangChain Python."
 ---
 
 >[Chaindesk platform](https://docs.chaindesk.ai/introduction) brings data from anywhere (Datsources: Text, PDF, Word, PowerPpoint, Excel, Notion, Airtable, Google Sheets, etc..) into Datastores (container of multiple Datasources).
@@ -7,7 +8,7 @@ Then your Datastores can be connected to ChatGPT via Plugins or any other Large 
 
 This notebook shows how to use [Chaindesk's](https://www.chaindesk.ai/) retriever.
 
-First, you will need to sign up for Chaindesk, create a datastore, add some data and get your datastore api endpoint url. You need the [API Key](https://docs.chaindesk.ai/api-reference/authentication).
+First, you will need to sign up for Chaindesk, create a datastore, add some data and get your datastore API endpoint URL. You need the [API Key](https://docs.chaindesk.ai/api-reference/authentication).
 
 ```python
 ```
@@ -40,9 +41,11 @@ retriever.invoke("What is Daftpage?")
 
 ---
 
-<Callout icon="pen-to-square" iconType="regular">
+<div className="source-links">
+<Callout icon="edit">
     [Edit this page on GitHub](https://github.com/langchain-ai/docs/edit/main/src/oss/python/integrations/retrievers/chaindesk.mdx) or [file an issue](https://github.com/langchain-ai/docs/issues/new/choose).
 </Callout>
-<Tip icon="terminal" iconType="regular">
+<Callout icon="terminal-2">
     [Connect these docs](/use-these-docs) to Claude, VSCode, and more via MCP for real-time answers.
-</Tip>
+</Callout>
+</div>
